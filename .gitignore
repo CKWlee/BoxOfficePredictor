@@ -4,12 +4,13 @@
 venv/
 env/
 
-# Data files (too large for git)
+# Data files (keep processed for deployment)
 data/raw/
-data/processed/
 
-# Model files
-models/
+# Model files (keep best_model for deployment)
+models/*.pkl
+models/*.png
+models/*.csv
 
 # Python
 __pycache__/
