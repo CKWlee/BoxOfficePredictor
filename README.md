@@ -1,6 +1,8 @@
 # Box Office Revenue Predictor
 
-Predicting how much money a movie will make at the box office using machine learning. Built this to explore what actually drives box office success — turns out budget and star power matter, but not as much as you'd think.
+**[Try the live demo →](https://letsseeyourfakemovie.streamlit.app/)**
+
+Predicting how much money a movie will make at the box office using machine learning. Built this to explore what actually drives box office success, still movies are a piece of the times so not everything can be explained.
 
 ## What It Does
 
@@ -10,7 +12,7 @@ Takes pre-release info about a movie (budget, cast, release date, genre, etc.) a
 
 Pulled ~2,600 movies from TMDB API and ended up with 1,919 that had complete budget/revenue data.
 
-**Sampling approach**: This isn't a random sample — I deliberately pulled movies across different revenue tiers (flops, mid-performers, blockbusters) to make sure the model could learn from failures, not just hits. The dataset is biased toward "notable" films (ones with 50+ votes on TMDB), but that's fine since the model is meant for theatrical releases, not micro-budget films that never hit theaters.
+**Sampling approach**: Unfortunately, this isn't a completely random sample as a statistics course would like. I deliberately pulled movies across different revenue tiers (flops, mid-performers, blockbusters) to make sure the model could learn from failures, not just hits. The dataset is biased toward "notable" films (ones with 50+ votes on TMDB), but that's fine since the model is meant for theatrical releases, not micro-budget films that never hit theaters.
 
 **What's in the data:**
 - Revenue range: $7 to $2.9B
