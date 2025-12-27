@@ -4,8 +4,8 @@
 venv/
 env/
 
-# Data files (keep processed for deployment)
-data/raw/
+# Data files (raw excluded except movies_raw for deployment)
+# Note: movies_raw.csv needed for app dropdowns
 
 # Model files (keep best_model for deployment)
 models/*.pkl
