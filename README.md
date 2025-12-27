@@ -11,4 +11,3 @@ Predicts how much a movie will make at the box office using pre-release informat
 | Linear Regression | 0.62 |
 | Random Forest | 0.62 |
 | **XGBoost** | **0.71** |
-MIT
