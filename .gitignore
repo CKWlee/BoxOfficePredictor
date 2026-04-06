@@ -1,5 +1,6 @@
 # Environment
 .env
+server/.env
 .venv/
 venv/
 env/
@@ -35,6 +36,9 @@ build/
 # OS
 .DS_Store
 Thumbs.db
+
+# MLflow
+mlruns/
 
 # Logs
 *.log
