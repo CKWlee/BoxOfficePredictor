@@ -1,0 +1,9 @@
+data/raw/
+mlruns/
+.git/
+__pycache__/
+*.pyc
+.env
+venv/
+.venv/
+node_modules/
