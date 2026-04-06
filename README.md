@@ -61,7 +61,7 @@ docker-compose up
 
 **api example**
 ```bash
-curl -X POST http://localhost:8000/predict \
+curl -X POST https://boxoffice-api-560790382976.us-central1.run.app/predict \
   -H "Content-Type: application/json" \
   -d '{"budget": 150000000, "genres": ["Action", "Adventure"], "runtime": 140, "release_month": 7, "is_franchise": 1}'
 ```
