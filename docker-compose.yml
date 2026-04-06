@@ -1,0 +1,39 @@
+version: "3.9"
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: server/Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      PORT: "8000"
+    volumes:
+      - ./models:/app/models
+      - ./data/processed:/app/data/processed
+    restart: unless-stopped
+
+  streamlit:
+    image: python:3.11-slim
+    working_dir: /app
+    volumes:
+      - .:/app
+    ports:
+      - "8501:8501"
+    command: >
+      sh -c "pip install -r requirements.txt -q &&
+             streamlit run app.py --server.port 8501 --server.address 0.0.0.0"
+    restart: unless-stopped
+
+  mlflow:
+    image: python:3.11-slim
+    working_dir: /mlflow
+    volumes:
+      - ./mlruns:/mlflow/mlruns
+    ports:
+      - "5000:5000"
+    command: >
+      sh -c "pip install mlflow -q &&
+             mlflow ui --host 0.0.0.0 --port 5000 --backend-store-uri /mlflow/mlruns"
+    restart: unless-stopped
